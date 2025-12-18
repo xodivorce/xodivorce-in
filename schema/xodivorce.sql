@@ -173,7 +173,7 @@ INSERT INTO `resume_experience` (`id`, `job_title`, `start_year`, `end_year`, `d
 CREATE TABLE `resume_skills` (
   `id` int(11) NOT NULL,
   `skill_name` varchar(100) NOT NULL,
-  `skill_level` int(11) NOT NULL
+  `skill_level` int(11) NOT NULL CHECK (`skill_level` BETWEEN 0 AND 100)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
