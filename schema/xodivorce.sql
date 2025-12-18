@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 10, 2025 at 05:54 PM
+-- Generation Time: Dec 18, 2025 at 06:24 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -45,36 +45,26 @@ CREATE TABLE `blog_posts` (
 --
 
 INSERT INTO `blog_posts` (`id`, `post_link`, `post_image`, `post_image_alt`, `post_category`, `post_date`, `post_title`, `post_text`, `platform`, `post_iframe`) VALUES
-(1, 'https://www.youtube.com/watch?v=omSz7gUnyG0', './themes/dark_theme/assets/images/blogs/how-to-install-grand-theft-auto-iv.jpg', 'how-to-install-grand-theft-auto-iv', 'Game', '2024-06-27', 'How To Install Grand Theft Auto IV - MacBook Air M1', 'Hey there, awesome people! 🚀 In this video, I’ll show you how to install CrossOver on macOS.', 'YouTube', NULL),
-(2, 'https://www.youtube.com/watch?v=ZHySccRced0', './themes/dark_theme/assets/images/blogs/your-mac-will-never-be-the-same!.jpg', 'your-mac-will-never-be-the-same!', 'OS', '2024-08-17', 'Your Mac will NEVER be the same!', 'Hey there, awesome people! 🚀 In this video, I’ll show you how to effortlessly install CrossOver on your macOS. It\'s quick, it\'s easy, and it’s perfect for all you gamers and app lovers out there! 🎮🍏', 'YouTube', ''),
-(3, 'https://www.youtube.com/watch?v=0xZDMwt3aXA', './themes/dark_theme/assets/images/blogs/bluestacks-air-tutorial-m1.jpg', 'bluestacks-air-tutorial-m1', 'OS', '2025-03-31', 'How To Play Android Games - Mac Book Air M1', 'Welcome to the Homebrew installation tutorial! Works on All Apple Silicons (M1-M4) 🚀\r\n     Today, we’ll get Homebrew up and running on your Mac in no time! 🍏✨', 'YouTube', NULL),
-(4, 'https://www.youtube.com/watch?v=D7ZGFCCfVkM', './themes/dark_theme/assets/images/blogs/cracked-softwares-on-macbook.jpg', 'cracked-softwares-on-macbook', 'OS', '2025-11-04', 'Cracked Softwares On MacBook?', 'This video is for educational purposes only. We’re exploring how people find modified Mac apps and how the process works - but please use this knowledge responsibly.\r\n', 'YouTube', NULL),
-(11, 'https://www.facebook.com/share/14gwR67wAQq/', NULL, 'Talks 🌒', 'Facebook', '2023-03-08', 'Talks 🌒', '\'Like if you hold me without hurting me,<br>\r\n     &nbsp;You\'ll be the one who ever did.\' <br>~ And the Sun replies, click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D935622664537381%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500'),
-(12, 'https://www.facebook.com/share/14gwR67wAQq/', NULL, 'Nostalgia 🎐', 'Facebook', '2023-02-06', 'Nostalgia 🎐', '\'Hold her while you can,<br>\r\n     &nbsp;\'Cause someday you won\'t get the chance!!\'<br>~ Some of my fav lyrics, click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D917376926361955%26set%3Da.290981085668212%26type%3D3&show_text=false&width=500'),
-(14, 'https://www.facebook.com/share/19VToboxEU/', NULL, 'Getting Over You 📙', 'Facebook', '2023-02-22', 'Getting Over You 📙', '\'What do you do<br> when your problem<br> and your solution<br> is the same person 🦋 ?\'<br>~ One of my fav books! Click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D927474668685514%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500'),
-(15, 'https://www.facebook.com/share/12E7Gz9Dn5q/', NULL, 'Fallen Angel vibes. 🪐', 'Facebook', '2023-05-04', 'Fallen Angel vibes. 🪐', 'I\'m amazed that a railway station can feel like an angelic place 🦋. Here are some shots! Click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D967019374731043%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500'),
-(16, 'https://www.facebook.com/share/1CvRJpYgr8/', NULL, 'Childish <', 'Facebook', '2023-04-20', 'Childish <', 'This is kinda Doraemon-era, so if we go back in time… But if we can 🫥.! Click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D959398318826482%26set%3Da.290981085668212%26type%3D3&show_text=false&width=500'),
-(17, 'https://www.facebook.com/photo.php?fbid=968598017906512&set=pb.100042689670857.-2207520000&type=3', NULL, 'Selenophile 🌒', 'Facebook', '2023-05-07', 'Selenophile 🌒', 'Hi, I\'m a selenophile 🌓, that\'s enough about me! So what is your type? Click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D968598017906512%26set%3Da.100419004724422&show_text=false&width=500'),
-(18, 'https://www.facebook.com/share/p/15NQqY1EoF/', NULL, 'Blood Moon 🌒', 'Facebook', '2023-05-05', 'Blood Moon 🌒', 'Randomly at 📍 Basirhat Picnic Spot, spotted a Blood Moon. Here\'s some potoshots as I\'m a selenophile 🌓. Click to view photos on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D967628648003449%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500'),
-(19, 'https://www.facebook.com/photo.php?fbid=1231288908304087&set=a.100419004724422&type=3&ref=embed_post', NULL, 'Fest - KEI, 2k24 ✨', 'Facebook', '2024-08-09', 'Fest - KEI, 2k24 ✨', 'The first freshers Fest of Kingston Educational Institute \'23. That was an extreme day! Click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D1231288908304087%26set%3Da.100419004724422&show_text=false&width=500'),
-(20, 'https://www.facebook.com/share/p/19g563kDKT/', NULL, 'Tarapith - 2, 2k23 ✨', 'Facebook', '2023-06-22', 'Tarapith - 2, 2k23 ✨', 'Bhaichara..!! @_the_swagatam also clicked some shots. Just in case if you\'re interested, click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D994757075290606%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500'),
-(21, 'https://www.facebook.com/share/p/15YDwD9kiY/', NULL, 'Tarapith - 1, 2k23 ✨', 'Facebook', '2023-06-21', 'Tarapith - 1, 2k23 ✨', 'Bhaichara..!! @_the_swagatam also clicked some shots. Just in case if you\'re interested, click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D994762201956760%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500'),
-(22, 'https://www.facebook.com/photo.php?fbid=1064175378348775&set=a.100419004724422&type=3&ref=embed_post', NULL, 'Did\'t give a shit', 'Facebook', '2023-10-28', 'Did\'t give a shit', 'And the moral of the story is: \"Don\'t give a lecture to someone who just needs a hug.\" They don\'t give a f*** about your lecture! Click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D1064175378348775%26set%3Da.100419004724422&show_text=false&width=500'),
-(23, 'https://www.facebook.com/share/p/1CrDQA1gkB/', NULL, 'Be Black', 'Facebook', '2024-07-15', 'Be Black', 'The world is filled with \"Color\" and \"Rainbows\". If you aren\'t one, be the Black. Click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D1004317811001199%26set%3Da.290981085668212%26type%3D3&show_text=true&width=500'),
-(24, 'https://www.facebook.com/share/17P8aRqnWR/', NULL, 'Be One', 'Facebook', '2023-07-08', 'Be One', 'The world is filled with \"Good\" and \"Kind\" people. If you can\'t find one, be one! Click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D1168922104540768%26set%3Da.100942014672121%26type%3D3&show_text=false&width=500'),
-(25, 'https://www.facebook.com/photo.php?fbid=1105122847587361&set=pb.100042689670857.-2207520000&type=3', NULL, 'Developer', 'Facebook', '2024-01-10', 'Developer', '⚡ An 18-year-old self-taught full-stack web and Android developer & UI/UX designer ✨ is hustling to spice things up and make them more interesting! 🚀 Click to view on Facebook.', 'Facebook', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D1105122847587361%26set%3Da.100419004724422&show_text=true&width=500'),
-(26, 'https://www.instagram.com/p/CtG2gzyrGEQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'It Ends With Us 🥀', 'Instagram', '2023-09-13', 'It Ends With Us 🥀', 'There is no such thing as bad people. We\'re all just people who sometimes do bad things...🥀 #IT ENDS WITH US, click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/CtG2gzyrGEQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
-(27, 'https://www.instagram.com/p/C5LnyqLS5HR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Apple MacBook Air M1 💻', 'Instagram', '2024-03-31', 'Apple MacBook Air M1 💻', 'Sometimes it\'s you, all you need to find yourself..☺️, I\'ve tried to spend all days through my Mac Air M1; click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C5LnyqLS5HR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
-(28, 'https://www.instagram.com/p/C68ujtkSvvF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Spotify 🎧', 'Instagram', '2024-05-14', 'Spotify 🎧', 'Her~ @this.is.gini , in dream 🌬️✨ !!, I\'ve tried this song and in love with it - spend all days 😭♥️; click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C68ujtkSvvF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
-(29, 'https://www.instagram.com/reel/C78eHXlS3jf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, '나비 🦋', 'Instagram', '2024-06-08', '나비 🦋', 'Nymphalis polychloros & micro generative video. The butterfly(나비) is so pretty 😭🦋♥️ and fully upscaled through AI, click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/C78eHXlS3jf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
-(30, 'https://www.instagram.com/p/C-3EmVtSQ73/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Best of 2k23 🗿', 'Instagram', '2024-08-19', 'Best of 2k23 🗿', 'Don\'t compare me with others, if they\'re better, go with them; idgaf...!!; click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C-3EmVtSQ73/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
-(31, 'https://www.instagram.com/p/C-80l0gyDkx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Santiniketan 2k23 🍀', 'Instagram', '2024-08-22', 'Santiniketan 2k23 🍀', 'Bhaichara..!! @_the_swagatam also some sorts clicked by him. Just in case if you\'re interested, click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C-80l0gyDkx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
-(32, 'https://www.instagram.com/p/C_yaQx7TEa7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Maya Pur, Nadia 2k22 ✨', 'Instagram', '2024-09-12', 'Maya Pur, Nadia 2k22 ✨', 'Bhaichara..!! @_the_swagatam also some sorts clicked by him. Just in case if you\'re interested, click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C_yaQx7TEa7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
-(33, 'https://www.instagram.com/reel/DAuptyny9dz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Happy endings✨', 'Instagram', '2024-10-05', 'Happy endings✨', 'Tried this trend \' 💀, better luck next time <3. \'; Everyone does deserve happy endings 🗿, for me not everyone. Click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DAuptyny9dz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
-(34, 'https://www.instagram.com/p/C64SDX1yI2B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Prequelapp', 'Instagram', '2024-05-13', 'Prequelapp', 'Try this app @prequelapp with my sorts, in love 😭♥️. The filter named Air, Click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C64SDX1yI2B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
-(35, 'https://www.instagram.com/p/DABUXD9S-NH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', '', 'LANA <', 'Instagram', '2024-09-17', 'LANA <', 'Memories in 2k24, the fan meetup in Sep was unexpected! Some great clicks—check them out on Instagram.', 'Instagram', NULL),
-(36, 'https://www.instagram.com/p/DFLgXzGT964/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', '', 'Ekbar chuye dekho…🫴🏼', 'Instagram', '2025-01-24', 'Ekbar chuye dekho…🫴🏼', 'Explored Kolkata’s gems—Maidan, The 42, Museum, and Princep Ghat.  \r\n     The city’s charm never fades! ✨ Click to view on Instagram.', 'Instagram', NULL),
-(38, 'https://www.instagram.com/p/DFUgCTByc4z/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', '', 'Billie Eilish hoodies', 'Instagram', '2025-01-27', 'Like a fever, I\'m burning alive…🪻.𖥔 ݁˖‧˖', 'Tried the Billie Eilish hoodies from @thebtclub and I\'m amazed by the quality! Highly recommended! Click to view on Instagram', 'Instagram', NULL);
+(1, 'https://www.youtube.com/watch?v=omSz7gUnyG0', './themes/dark_theme/assets/images/blogs/how-to-install-grand-theft-auto-iv.webp', 'how-to-install-grand-theft-auto-iv', 'Game', '2024-06-27', 'How To Install Grand Theft Auto IV - MacBook Air M1', 'Hey there, awesome people! 🚀 In this video, I’ll show you how to install GTA IV or else on macOS. We\'re exploring how people gonna play Mac games(🎮) for free and how the process works.', 'YouTube', NULL),
+(2, 'https://www.youtube.com/watch?v=ZHySccRced0', './themes/dark_theme/assets/images/blogs/your-mac-will-never-be-the-same!.webp', 'your-mac-will-never-be-the-same!', 'OS', '2024-08-17', 'Your Mac will NEVER be the same!', 'Hey there, awesome people! 🚀 In today’s video, I’ll show you how to effortlessly update your Mac to macOS 15.1. And khow about is it perfect to update the base model of Mac with M1 chip! 🍏✨\r\n', 'YouTube', ''),
+(3, 'https://www.youtube.com/watch?v=0xZDMwt3aXA', './themes/dark_theme/assets/images/blogs/bluestacks-air-tutorial-m1.webp', 'bluestacks-air-tutorial-m1', 'OS', '2025-03-31', 'How To Play Android Games - Mac Book Air M1', 'Hey there, awesome people!🚀 In this video, I’ll show you how to effortlessly install Android Games on your macOS. It\'s quick & easy for all you gamers out there! 🎮🍏', 'YouTube', NULL),
+(4, 'https://www.youtube.com/watch?v=D7ZGFCCfVkM', './themes/dark_theme/assets/images/blogs/cracked-softwares-on-macbook.webp', 'cracked-softwares-on-macbook', 'OS', '2025-11-04', 'Cracked Softwares On MacBook?', 'This video is for educational purposes(📚) only. We’re exploring how people find modified Mac apps and how the process works - but please use this knowledge responsibly 👻.\r\n', 'YouTube', NULL),
+(5, 'https://www.instagram.com/p/CtG2gzyrGEQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'It Ends With Us 🥀', 'Instagram', '2023-09-13', 'It Ends With Us 🥀', 'There is no such thing as bad people. We\'re all just people who sometimes do bad things...🥀 #IT ENDS WITH US, click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/CtG2gzyrGEQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
+(6, 'https://www.instagram.com/p/C5LnyqLS5HR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Apple MacBook Air M1 💻', 'Instagram', '2024-03-31', 'Apple MacBook Air M1 💻', 'Sometimes it\'s you, all you need to find yourself..☺️, I\'ve tried to spend all days through my Mac Air M1; click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C5LnyqLS5HR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
+(7, 'https://www.instagram.com/p/DMF7eIcyqKE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Spotify 🎧', 'Instagram', '2024-05-14', 'Spotify 🎧', 'Her~ @this.is.gini , in dream 🌬️✨ !!, I\'ve tried this song and in love with it - spend all days 😭♥️; click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C68ujtkSvvF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
+(8, 'https://www.instagram.com/reel/C78eHXlS3jf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, '나비 🦋', 'Instagram', '2024-06-08', '나비 🦋', 'Nymphalis polychloros & micro generative video. The butterfly(나비) is so pretty 😭🦋♥️ and fully upscaled through AI, click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/C78eHXlS3jf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
+(9, 'https://www.instagram.com/p/DMF8pH6yHRn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Best of 2k23 🗿', 'Instagram', '2024-08-19', 'Best of 2k23 🗿', 'Don\'t compare me with others, if they\'re better, go with them; idgaf...!!; click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C-3EmVtSQ73/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
+(10, 'https://www.instagram.com/p/DMF_FFMydz1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'My small Lilith.. 💨', 'Instagram', '2025-07-19', 'My small Lilith..💨', 'So, I bought the MacBook Air M1 finally. After lots of efforts finally full-fill my dream towards apple devices.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C-80l0gyDkx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
+(11, 'https://www.instagram.com/p/DMGDoGZyagG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Kolkata: The City of Joy 🤩', 'Instagram', '2025-07-18', 'Kolkata: The City of Joy 🤩', 'I explored all of the parts of Kolkata, with my friends and we made a lot of memories.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C_yaQx7TEa7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
+(12, 'https://www.instagram.com/reel/DAuptyny9dz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Happy endings ✨', 'Instagram', '2024-10-05', 'Happy endings✨', 'Tried this trend \' 💀, better luck next time <3. \'; Everyone does deserve happy endings 🗿, for me not everyone. Click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DAuptyny9dz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
+(13, 'https://www.instagram.com/p/C64SDX1yI2B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Prequelapp', 'Instagram', '2024-05-13', 'Prequelapp', 'Try this app @prequelapp with my sorts, in love 😭♥️. The filter named Air, Click to view on Instagram.', 'Instagram', '<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/p/C64SDX1yI2B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" data-instgrm-version=\"14\" style=\"width:100%;\"></blockquote><script async src=\"//www.instagram.com/embed.js\"></script>'),
+(14, 'https://www.instagram.com/p/DMGPxPSSI_9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', '', 'HR Meetup 2k25, Euphoria..💨', 'Instagram', '2025-07-20', 'HR Meetup 2k25, Euphoria..💨', 'Memories in 2k24, the fan meetup in Sep was unexpected! Some great clicks—check them out on Instagram.', 'Instagram', '<blockquote class=\\\"instagram-media\\\" data-instgrm-permalink=\\\"https://www.instagram.com/reel/DAuptyny9dz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\\\" data-instgrm-version=\\\"14\\\" style=\\\"width:100%;\\\"></blockquote><script async src=\\\"//www.instagram.com/embed.js\\\"></script>'),
+(15, 'https://www.instagram.com/p/DMGQhIeyID4?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', '', 'Santiniketan 🧩', 'Instagram', '2024-09-10', 'Santiniketan 🧩', 'Explored Santiniketan tourist spots. Although the adventure is awesome, must try at least once in a life.', 'Instagram', '<blockquote class=\\\"instagram-media\\\" data-instgrm-permalink=\\\"https://www.instagram.com/reel/DAuptyny9dz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\\\" data-instgrm-version=\\\"14\\\" style=\\\"width:100%;\\\"></blockquote><script async src=\\\"//www.instagram.com/embed.js\\\"></script>'),
+(16, 'https://www.instagram.com/p/DNdRT2pS2X-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', '', 'iPhone 16 🪻.𖥔 ݁˖‧˖', 'Instagram', '2025-08-15', 'iPhone 16 🪻.𖥔 ݁˖‧˖', 'And if I changed everything - yeah, my whole fucking life! would you please love me? - yeah thats for my iPhone 16 🌪️', 'Instagram', '<blockquote class=\\\"instagram-media\\\" data-instgrm-permalink=\\\"https://www.instagram.com/reel/DAuptyny9dz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\\\" data-instgrm-version=\\\"14\\\" style=\\\"width:100%;\\\"></blockquote><script async src=\\\"//www.instagram.com/embed.js\\\"></script>'),
+(17, 'https://www.instagram.com/p/DN2ROTx5BZR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Salt Lake City 🌆', 'Instagram', '2025-08-27', 'Salt Lake City 🌆', 'At the dawn, the city feels like: Baby, I’m obsessed with you, and there’s no replica..🦋', 'Instagram', '<blockquote class=\\\"instagram-media\\\" data-instgrm-permalink=\\\"https://www.instagram.com/reel/DAuptyny9dz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\\\" data-instgrm-version=\\\"14\\\" style=\\\"width:100%;\\\"></blockquote><script async src=\\\"//www.instagram.com/embed.js\\\"></script>'),
+(18, 'https://www.instagram.com/p/DOJlR9XkkEn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', '', 'A moody Kolkata 🌧️', 'Instagram', '2025-09-06', 'A moody Kolkata 🌧️', 'So give me the night to show you, hold you - don’t leave me out here dancin’ alone! Kolkata on a railny day hits hard though.', 'Instagram', '<blockquote class=\\\"instagram-media\\\" data-instgrm-permalink=\\\"https://www.instagram.com/p/C64SDX1yI2B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\\\" data-instgrm-version=\\\"14\\\" style=\\\"width:100%;\\\"></blockquote><script async src=\\\"//www.instagram.com/embed.js\\\"></script>'),
+(19, 'https://www.instagram.com/p/DP2GE0-kpL8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Naihati, 24 PGS(N)', 'Instagram', '2025-10-16', 'Naihati, 24 PGS(N)', 'I visited the Naihati, 24 PGS(N) with my mom; specially for Puja. Else I shot down some amazing pics on there ✨.', 'Instagram', '<blockquote class=\\\"instagram-media\\\" data-instgrm-permalink=\\\"https://www.instagram.com/p/C64SDX1yI2B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\\\" data-instgrm-version=\\\"14\\\" style=\\\"width:100%;\\\"></blockquote><script async src=\\\"//www.instagram.com/embed.js\\\"></script>'),
+(20, 'https://www.instagram.com/p/DQz1NK4k5-t?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', NULL, 'Swipe 👉🏻', 'Instagram', '2025-11-09', 'Swipe 👉🏻', 'Exactly nothing. I just live for a few hours on Instagram, Omegle. I enjoyed taking to random people from the world 🌍.', 'Instagram', '<blockquote class=\\\"instagram-media\\\" data-instgrm-permalink=\\\"https://www.instagram.com/p/C64SDX1yI2B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\\\" data-instgrm-version=\\\"14\\\" style=\\\"width:100%;\\\"></blockquote><script async src=\\\"//www.instagram.com/embed.js\\\"></script>');
 
 -- --------------------------------------------------------
 
@@ -93,7 +83,7 @@ CREATE TABLE `maintenance` (
 --
 
 INSERT INTO `maintenance` (`id`, `is_active`, `updated_at`) VALUES
-(1, 0, '2025-11-30 10:54:58');
+(1, 0, '2025-12-13 08:19:54');
 
 -- --------------------------------------------------------
 
@@ -114,15 +104,15 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `project_name`, `project_category`, `project_image`, `project_link`) VALUES
-(1, 'Xodivorce.In', 'Web development', './themes/dark_theme/assets/images/projects/xodivorce_in_project.png', 'https://www.xodivorce.in'),
-(2, 'Isdowndetectordown', 'Web development', './themes/dark_theme/assets/images/projects/isdowndetectordown_project.png', 'https://isdowndetectordown.xodivorce.in'),
-(3, 'Face Recognigation System', 'Applications', './themes/dark_theme/assets/images/projects/face_recognation_project.png', 'https://github.com/xodivorce/face_recognise_attend'),
-(4, 'Anyencrypter Bot', 'Applications', './themes/dark_theme/assets/images/projects/encrypter_project.png', 'https://telegram.me/anyencrypter_bot'),
-(5, 'Xeorl - Link Shortener', 'Web development', './themes/dark_theme/assets/images/projects/xeorl_project.png', 'https://xeorl.xodivorce.in'),
-(6, 'Zukes - IG', 'Applications', './themes/dark_theme/assets/images/projects/zukes_ig_project.png', 'https://telegram.me/Zukesinsta_bot'),
-(7, 'Breakout Ball Game', 'Applications', './themes/dark_theme/assets/images/projects/breakout_game_project.png', 'https://github.com/xodivorce/breakout-game'),
-(8, 'Solar Explorer', 'Web development', './themes/dark_theme/assets/images/projects/solar_explorer_project.png', 'https://solar-explorer.xodivorce.in'),
-(9, 'Npx - Xodivorce', 'Applications', './themes/dark_theme/assets/images/projects/npx_business_card_project.png', 'https://github.com/xodivorce/npx-xodivorce');
+(1, 'Xodivorce.In', 'Web development', './themes/dark_theme/assets/images/projects/xodivorce_in_project.webp', 'https://www.xodivorce.in'),
+(2, 'Isdowndetectordown', 'Web development', './themes/dark_theme/assets/images/projects/isdowndetectordown_project.webp', 'https://isdowndetectordown.xodivorce.in'),
+(3, 'Face Recognigation System', 'Applications', './themes/dark_theme/assets/images/projects/face_recognation_project.webp', 'https://github.com/xodivorce/face_recognise_attend'),
+(4, 'Anyencrypter Bot', 'Applications', './themes/dark_theme/assets/images/projects/encrypter_project.webp', 'https://telegram.me/anyencrypter_bot'),
+(5, 'Xeorl - Link Shortener', 'Web development', './themes/dark_theme/assets/images/projects/xeorl_project.webp', 'https://xeorl.xodivorce.in'),
+(6, 'Zukes - IG', 'Applications', './themes/dark_theme/assets/images/projects/zukes_ig_project.webp', 'https://telegram.me/Zukesinsta_bot'),
+(7, 'Breakout Ball Game', 'Applications', './themes/dark_theme/assets/images/projects/breakout_game_project.webp', 'https://github.com/xodivorce/breakout-game'),
+(8, 'Solar Explorer', 'Web development', './themes/dark_theme/assets/images/projects/solar_explorer_project.webp', 'https://solar-explorer.xodivorce.in'),
+(9, 'Npx - Xodivorce', 'Applications', './themes/dark_theme/assets/images/projects/npx_business_card_project.webp', 'https://github.com/xodivorce/npx-xodivorce');
 
 -- --------------------------------------------------------
 
@@ -183,7 +173,7 @@ INSERT INTO `resume_experience` (`id`, `job_title`, `start_year`, `end_year`, `d
 CREATE TABLE `resume_skills` (
   `id` int(11) NOT NULL,
   `skill_name` varchar(100) NOT NULL,
-  `skill_level` int(11) NOT NULL CHECK (`skill_level` between 0 and 100)
+  `skill_level` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -226,10 +216,10 @@ CREATE TABLE `social_links` (
 --
 
 INSERT INTO `social_links` (`id`, `platform`, `url`, `icon_name`, `display_order`) VALUES
-(1, 'Facebook', 'https://www.facebook.com/xodivorce', 'logo-facebook', 1),
-(2, 'Twitter (X)', 'https://x.com/xodivorce1', 'logo-twitter', 2),
-(3, 'Instagram', 'https://www.instagram.com/xodivorce', 'logo-instagram', 3),
-(4, 'Pinterest', 'https://in.pinterest.com/xodivorc3', 'logo-pinterest', 4),
+(1, 'YouTube', 'https://www.youtube.com/@xodivorce', 'logo-youtube', 1),
+(2, 'Instagram', 'https://www.instagram.com/xodivorce', 'logo-instagram', 2),
+(3, 'GitHub', 'https://github.com/xodivorce', 'logo-github', 3),
+(4, 'Pinterest', 'https://pinterest.com/xodivorc3/', 'logo-pinterest', 4),
 (5, 'LinkedIn', 'https://www.linkedin.com/in/xodivorce/', 'logo-linkedin', 5);
 
 -- --------------------------------------------------------
@@ -355,12 +345,6 @@ ALTER TABLE `resume_experience`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `resume_skills`
---
-ALTER TABLE `resume_skills`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `social_links`
 --
 ALTER TABLE `social_links`
@@ -410,30 +394,6 @@ ALTER TABLE `resume_education`
 -- AUTO_INCREMENT for table `resume_experience`
 --
 ALTER TABLE `resume_experience`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `resume_skills`
---
-ALTER TABLE `resume_skills`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `social_links`
---
-ALTER TABLE `social_links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `town_map`
---
-ALTER TABLE `town_map`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
-
---
--- AUTO_INCREMENT for table `words_by_them`
---
-ALTER TABLE `words_by_them`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
