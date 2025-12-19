@@ -1,12 +1,12 @@
 ## Xodivorce - Portfolio Website: powered by @xodivorce
 
 ### 👀 Preview:
-<img src="./src/themes/dark_theme/assets/images/preview/xodivorce_in_preview.png" alt="xodivorce-in-preview">
+<img src="./src/themes/dark_theme/assets/images/preview/xodivorce_in_preview.jpg" alt="xodivorce-in-preview">
 
 ### Official portfolio website of Prasid Mandal. A full-stack web developer, also reknowned as @xodivorce.
 
 [![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
-[![version](https://img.shields.io/badge/version-v12.0.2-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
+[![version](https://img.shields.io/badge/version-v12.0.3-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 
 > **🥰 Like this project? Please consider giving it a Star (🌟) on GitHub to show us your appreciation. Thank you!**
@@ -47,7 +47,7 @@ Want to get started quickly? Follow the instructions below to install and run th
 🐞 **Got Ideas or Spotted a Bug?**   
 Don’t be shy! [*Open an issue*](https://github.com/xodivorce/xodivorce_in/issues) to discuss new features, enhancements, or any bugs you find. Your feedback is golden!!
 
-> <strong>⚠️ For Frequently Asked Questions, check out these files:</strong>
+> <strong>⚠️ Frequently Asked Questions:</strong>
 > <ul>
 >   <li><a href="FAQs/FAQ_EN.md" style="color:black;text-decoration:none;">🇺🇸 FAQ in English</a></li>
 >   <li><a href="FAQs/FAQ_IN.md" style="color:black;text-decoration:none;">🇮🇳 FAQ हिंदी में</a></li>
