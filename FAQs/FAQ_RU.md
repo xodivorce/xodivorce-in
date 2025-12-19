@@ -14,3 +14,53 @@ sudo chmod 755 assets/favicon
 ```
 
 </details>
+
+<details>
+  <summary>Как удалить файлы <code>.DS_Store</code> из всех директорий?</summary>
+
+- Сначала проверьте, в каких директориях существуют файлы `.DS_Store`:
+
+```bash
+# Удалить все файлы .DS_Store
+find . -type f -name ".DS_Store" -delete
+```
+
+```bash
+# Проверить, остались ли какие-либо "мусорные" файлы
+find . -name ".DS_Store"
+```
+
+</details>
+
+<details>
+  <summary>Как конвертировать изображения PNG и JPG в WebP?</summary>
+
+- Убедитесь, что `ffmpeg` установлен, затем выполните команды из директории, содержащей ваши изображения.
+
+```bash
+# Конвертировать все PNG-файлы в WebP
+  for f in *.png; do
+  ffmpeg -i "$f" \
+    -map_metadata -1 \
+    -pix_fmt yuv444p \
+    -c:v libwebp \
+    -lossless 0 \
+    -quality 98 \
+    "${f%.png}.webp"
+  done
+```
+
+```bash
+# Конвертировать все JPG-файлы в WebP
+  for f in *.jpg; do
+  ffmpeg -i "$f" \
+    -map_metadata -1 \
+    -pix_fmt yuv444p \
+    -c:v libwebp \
+    -lossless 0 \
+    -quality 98 \
+    "${f%.jpg}.webp"
+  done
+```
+
+</details>
