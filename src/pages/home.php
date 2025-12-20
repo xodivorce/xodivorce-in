@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official Portfolio Website of <?= ucwords(strtolower($_ENV['AUTHOR'])) ?> - Full-Stack Web Developer - (Also Reknowned as @<?= $_ENV['DOMAIN'] ?>). | Know More About Him and His WorkExperince">
+    <meta name="description" content="Official Portfolio Website of <?= ucwords(strtolower($_ENV['AUTHOR'])) ?> - Full-Stack Web Developer - (Also Reknowned as @<?= strtolower($_ENV['DOMAIN']) ?>). | Know More About Him and His WorkExperince">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="<?= $_ENV['DOMAIN'] ?> - Portfolio | @<?= lcfirst($_ENV['DOMAIN']) ?>">
+    <meta property="og:title" content="<?= $_ENV['DOMAIN'] ?> - Portfolio | @<?= strtolower($_ENV['DOMAIN']) ?>">
     <meta property="og:description" content="Official Portfolio Website of <?= ucwords(strtolower($_ENV['AUTHOR'])) ?> - Full-Stack Web Developer - (Also Reknowned as @<?= strtolower($_ENV['DOMAIN']) ?>).">
-    <meta property="og:image" content="https://<?= $_ENV['DOMAIN'] ?>./themes/dark_theme/assets/images/user/<?= strtolower($_ENV['DOMAIN']) ?>.png">
+    <meta property="og:image" content="https://<?= strtolower($_ENV['DOMAIN']) ?>.in/themes/dark_theme/assets/images/user/<?= strtolower($_ENV['DOMAIN']) ?>.png">
+    <meta property="og:url" content="https://<?= strtolower($_ENV['DOMAIN']) ?>.in/" />
+    <meta property="og:type" content="website" />
     <meta name="p:domain_verify" content="<?= htmlspecialchars($domainVerifyContent) ?>" />
-    <title><?= $_ENV['DOMAIN'] ?> - Portfolio | @<?= lcfirst($_ENV['DOMAIN']) ?></title>
+    <title><?= $_ENV['DOMAIN'] ?> - Portfolio | @<?= strtolower($_ENV['DOMAIN']) ?></title>
     <?php include './themes/dark_theme/assets/_integrate.php'; ?>
 </head>
 
