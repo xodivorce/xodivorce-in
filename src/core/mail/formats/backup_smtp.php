@@ -1,99 +1,71 @@
 <?php
 
+require __DIR__ . '/../../vendor/autoload.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-if (!function_exists('env')) {
-    function env(string $k, $d = null)
-    {
-        return $_ENV[$k] ?? $d;
-    }
-}
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../../');
+$dotenv->load();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo "<span><ion-icon name='close-circle-outline'></ion-icon> Method not allowed.</span>";
     exit;
 }
 
-$fullname = filter_var($_POST['fullname'] ?? '', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-$email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
-$message = filter_var($_POST['message'] ?? '', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$fullname = trim($_POST['fullname'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$message = trim($_POST['message'] ?? '');
 
-if (empty($fullname) || empty($email) || empty($message)) {
-    echo "<span><ion-icon name='close-circle-outline'></ion-icon> Please fill all required fields.</span>";
-    exit;
-}
-
-$filteredEmails = array_map('trim', explode(',', env('FILTER_EMAILS', '')));
-if (!empty($filteredEmails) && in_array(strtolower($email), array_map('strtolower', $filteredEmails))) {
-    echo "<span><ion-icon name='mail-open-outline'></ion-icon> Yep, that's my email; use a valid email instead.</span>";
+if ($fullname === '' || $email === '' || $message === '') {
+    echo "<span><ion-icon name='alert-outline'></ion-icon> Fill all the required fields.</span>";
     exit;
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "<span><ion-icon name='mail-open-outline'></ion-icon> Invalid email address! Please check and try again.</span>";
+    echo "<span><ion-icon name='alert-outline'></ion-icon> The email address is invalid.</span>";
     exit;
 }
 
-$smtpHost = env('SMTP_HOST_BACKUP');
-$smtpPort = env('SMTP_PORT');
-$smtpUser = env('SMTP_USER_BACKUP');
-$smtpPass = env('SMTP_PASS_BACKUP');
+$escFullname = htmlspecialchars($fullname, ENT_QUOTES, 'UTF-8');
+$escEmail = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
+$escMessage = nl2br(htmlspecialchars($message, ENT_QUOTES, 'UTF-8'));
 
-$useSMTP = true;
-if (empty($smtpUser) || empty($smtpPass)) {
-    $useSMTP = false;
-}
+$domain = $_ENV['DOMAIN'];
+$domainLower = strtolower($domain);
+$author = $_ENV['AUTHOR'];
+$authorFirst = ucfirst(strtolower(explode(' ', trim($author))[0]));
+
+$projectStartYear = (int) ($_ENV['PROJECT_START_YEAR'] ?? date('Y'));
+$currentYear = (int) date('Y');
+$yearText = ($currentYear > $projectStartYear)
+    ? $projectStartYear . '-' . substr((string) $currentYear, -2)
+    : (string) $projectStartYear;
 
 $mail = new PHPMailer(true);
+
 try {
+    $mail->isSMTP();
+    $mail->Host = $_ENV['SMTP_HOST_BACKUP'];
+    $mail->SMTPAuth = true;
+    $mail->Username = $_ENV['SMTP_USER_BACKUP'];
+    $mail->Password = $_ENV['SMTP_PASS_BACKUP'];
+    $mail->Port = (int) $_ENV['SMTP_PORT'];
+    $mail->SMTPSecure = ($mail->Port === 465)
+        ? PHPMailer::ENCRYPTION_SMTPS
+        : PHPMailer::ENCRYPTION_STARTTLS;
 
-    $domain = env('DOMAIN');
-    $domainLower = strtolower($domain);
-    $projectStartYear = env('PROJECT_START_YEAR');
-    $company = env('COMPANY');
-    $author = env('AUTHOR');
-    $authorFirst = ucfirst(strtolower(explode(' ', trim($author))[0]));
-
-    $currentYear = (int) date('Y');
-    $startYear = (int) $projectStartYear;
-    if ($startYear <= 0) {
-        $startYear = $currentYear;
-    }
-    $yearText = ($currentYear > $startYear)
-        ? "$startYear-" . substr((string) $currentYear, -2)
-        : (string) $startYear;
-
-    if ($useSMTP) {
-        $mail->isSMTP();
-        $mail->Host = $smtpHost;
-        $mail->SMTPAuth = true;
-        $mail->Username = $smtpUser;
-        $mail->Password = $smtpPass;
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = $smtpPort;
-    }
     $mail->CharSet = 'UTF-8';
 
-    $fromName = env('DOMAIN');
-    $fromAddress = $smtpUser ?: ('no-reply@' . $domainLower);
-
-    $mail->setFrom($fromAddress, $fromName);
-    $mail->addAddress(env('SMTP_SENDTO', $smtpUser ?: $fromAddress));
-    $mail->addReplyTo($email, $fullname);
+    $mail->setFrom($_ENV['SMTP_USER_BACKUP'], "{$domain}");
+    $mail->addAddress($_ENV['SMTP_SENDTO']);
+    $mail->addReplyTo($email, preg_replace('/[^a-zA-Z\s]/', '', $fullname));
 
     $mail->isHTML(true);
     $mail->Subject = "{$domain} - New contact form submission received";
 
-    $escFullname = htmlentities($fullname, ENT_QUOTES, 'UTF-8');
-    $escEmail = htmlentities($email, ENT_QUOTES, 'UTF-8');
-    $escMessage = nl2br(htmlentities($message, ENT_QUOTES, 'UTF-8'));
-
     $mail->Body = <<<HTML
+    
 <!doctype html>
 <html lang="en">
 <head>
@@ -173,51 +145,37 @@ try {
     </table>
 </body>
 </html>
+
 HTML;
 
     $mail->AltBody = "New contact form submission from {$fullname} ({$email}). Message: " . strip_tags($message);
 
-    if ($useSMTP) {
-        $mail->send();
-        echo "<span><ion-icon name='checkmark-circle-outline'></ion-icon> Thanks! Your message sent successfully.</span>";
-    } else {
-        $to = env('SMTP_SENDTO', $smtpUser ?: $fromAddress);
-        $subject = $mail->Subject;
-        $html = $mail->Body;
-        $headers = "MIME-Version: 1.0\r\n";
-        $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-        $headers .= "From: {$fromName} <{$fromAddress}>\r\n";
-        $headers .= "Reply-To: {$escEmail}\r\n";
-        if (mail($to, $subject, $html, $headers)) {
-            echo "<span><ion-icon name='checkmark-circle-outline'></ion-icon> Thanks! Your message sent successfully (mail fallback).</span>";
-        } else {
-            echo "<span><ion-icon name='close-circle-outline'></ion-icon> Error sending message with PHP mail().</span>";
-        }
-    }
+    $mail->send();
 
-    try {
-        $autoReply = new PHPMailer(true);
-        if ($useSMTP) {
-            $autoReply->isSMTP();
-            $autoReply->Host = $smtpHost;
-            $autoReply->SMTPAuth = true;
-            $autoReply->Username = $smtpUser;
-            $autoReply->Password = $smtpPass;
-            $autoReply->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $autoReply->Port = $smtpPort;
-        }
-        $autoReply->CharSet = 'UTF-8';
+    $autoReply = new PHPMailer(true);
 
-        $autoReply->setFrom($fromAddress, $fromName);
-        $autoReply->addAddress($email, $fullname);
-        $autoReply->addReplyTo(env('SMTP_SENDTO', $fromAddress), $fromName);
+    $autoReply->isSMTP();
+    $autoReply->Host = $_ENV['SMTP_HOST_BACKUP'];
+    $autoReply->SMTPAuth = true;
+    $autoReply->Username = $_ENV['SMTP_USER_BACKUP'];
+    $autoReply->Password = $_ENV['SMTP_PASS_BACKUP'];
+    $autoReply->Port = (int) $_ENV['SMTP_PORT'];
+    $autoReply->SMTPSecure = ($autoReply->Port === 465)
+        ? PHPMailer::ENCRYPTION_SMTPS
+        : PHPMailer::ENCRYPTION_STARTTLS;
 
-        $autoReply->isHTML(true);
-        $autoReply->Subject = "{$domain} - We've received your message!";
+    $autoReply->CharSet = 'UTF-8';
 
-        $firstName = htmlentities(explode(' ', trim($fullname))[0] ?? $fullname, ENT_QUOTES, 'UTF-8');
+    $autoReply->setFrom($_ENV['SMTP_USER_BACKUP'], "{$domain}");
+    $autoReply->addAddress($email, $fullname);
 
-        $autoReply->Body = <<<HTML
+    $firstName = explode(' ', $fullname)[0];
+
+    $autoReply->isHTML(true);
+    $autoReply->Subject = "{$domain} - We've received your message";
+
+    $autoReply->Body = <<<HTML
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -297,30 +255,16 @@ HTML;
     </table>
 </body>
 </html>
+
 HTML;
 
-        $autoReply->AltBody = "Thanks for reaching out. We'll review your message and get back to you soon.";
+    $autoReply->AltBody = "Thanks for reaching out. We'll review your message and get back to you soon.";
+    $autoReply->send();
 
-        if ($useSMTP) {
-            $autoReply->send();
-        } else {
-            $to = $escEmail;
-            $subject = $autoReply->Subject;
-            $html = $autoReply->Body;
-            $headers = "MIME-Version: 1.0\r\n";
-            $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-            $headers .= "From: {$fromName} <{$fromAddress}>\r\n";
-            $headers .= "Reply-To: " . env('SMTP_SENDTO', $fromAddress) . "\r\n";
-            $mailResult = mail($to, $subject, $html, $headers);
-            if (!$mailResult) {
-                echo "<span><ion-icon name='bug-outline'></ion-icon> Auto-reply failed using PHP mail().</span>";
-            }
-        }
-    } catch (Exception $e) {
-        $autoErr = htmlentities($e->getMessage(), ENT_QUOTES, 'UTF-8');
-        echo "<span><ion-icon name='bug-outline'></ion-icon> Auto-reply error occurred: <br><br> {$autoErr}</span>";
-    }
+    echo "<span><ion-icon name='mail-outline'></ion-icon> Your message was sent successfully.</span>";
+
 } catch (Exception $e) {
-    $err = htmlentities($mail->ErrorInfo ?? $e->getMessage(), ENT_QUOTES, 'UTF-8');
-    echo "<span><ion-icon name='bug-outline'></ion-icon> Mailer error occurred: <br><br> {$err}</span>";
+    echo "<span><ion-icon name='bug-outline'></ion-icon> Mailer Error: <br><br> {$mail->ErrorInfo}</span>";
 }
+
+?>
