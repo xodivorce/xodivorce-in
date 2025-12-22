@@ -11,7 +11,6 @@
     <meta property="og:image" content="https://<?= strtolower($_ENV['DOMAIN']) ?>.in/themes/dark_theme/assets/images/user/<?= strtolower($_ENV['DOMAIN']) ?>.png">
     <meta property="og:url" content="https://<?= strtolower($_ENV['DOMAIN']) ?>.in/" />
     <meta property="og:type" content="website" />
-    <meta name="p:domain_verify" content="<?= htmlspecialchars($domainVerifyContent) ?>" />
     <title><?= $_ENV['DOMAIN'] ?> - Portfolio | @<?= strtolower($_ENV['DOMAIN']) ?></title>
     <?php include './themes/dark_theme/assets/_integrate.php'; ?>
 </head>
