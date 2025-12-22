@@ -66,8 +66,8 @@
                             <p class="contact-title">Email</p>
 
                             <button class="contact-link"
-                                onclick="window.location.href='mailto:<?= $_ENV['SMTP_USER'] ?>'">
-                                <?= $_ENV['SMTP_USER'] ?>
+                                onclick="window.location.href='mailto:<?= $_ENV['USER_CUSTOM_MAIL'] ?>'">
+                                <?= $_ENV['USER_CUSTOM_MAIL'] ?>
                             </button>
 
                         </div>
@@ -692,7 +692,7 @@
 
                                 <li class="blog-post-item">
 
-                                    <a href="<?= htmlspecialchars($row['post_link']) ?> " target="_blank"
+                                    <a href="<?= htmlspecialchars($row['post_link']) ?>" target="_blank"
                                         rel="noopener noreferrer" style="display:block;">
 
                                         <figure class="blog-banner-box">

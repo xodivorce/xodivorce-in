@@ -1239,6 +1239,11 @@ main {
   margin-bottom: 10px;
 }
 
+.blog-meta p,
+.blog-meta time {
+  margin: 0;
+}
+
 .blog-meta :is(.blog-category, time) {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
@@ -1246,11 +1251,12 @@ main {
 }
 
 .blog-meta .dot {
-  background: var(--light-gray-70);
   width: 4px;
   height: 4px;
-  border-radius: 4px;
+  border-radius: 50%;
+  background: var(--light-gray-70);
 }
+
 
 .blog-item-title {
   margin-bottom: 10px;
