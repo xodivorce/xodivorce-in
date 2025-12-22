@@ -11,7 +11,6 @@
     <meta property="og:image" content="https://<?= strtolower($_ENV['DOMAIN']) ?>.in/themes/dark_theme/assets/images/user/<?= strtolower($_ENV['DOMAIN']) ?>.png">
     <meta property="og:url" content="https://<?= strtolower($_ENV['DOMAIN']) ?>.in/" />
     <meta property="og:type" content="website" />
-    <meta name="p:domain_verify" content="<?= htmlspecialchars($domainVerifyContent) ?>" />
     <title><?= $_ENV['DOMAIN'] ?> - Portfolio | @<?= strtolower($_ENV['DOMAIN']) ?></title>
     <?php include './themes/dark_theme/assets/_integrate.php'; ?>
 </head>
@@ -66,8 +65,8 @@
                             <p class="contact-title">Email</p>
 
                             <button class="contact-link"
-                                onclick="window.location.href='mailto:<?= $_ENV['SMTP_USER'] ?>'">
-                                <?= $_ENV['SMTP_USER'] ?>
+                                onclick="window.location.href='mailto:<?= $_ENV['USER_CUSTOM_MAIL'] ?>'">
+                                <?= $_ENV['USER_CUSTOM_MAIL'] ?>
                             </button>
 
                         </div>
@@ -692,7 +691,7 @@
 
                                 <li class="blog-post-item">
 
-                                    <a href="<?= htmlspecialchars($row['post_link']) ?> " target="_blank"
+                                    <a href="<?= htmlspecialchars($row['post_link']) ?>" target="_blank"
                                         rel="noopener noreferrer" style="display:block;">
 
                                         <figure class="blog-banner-box">
