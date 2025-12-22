@@ -14,3 +14,4 @@
 <?php
 $domainVerifyContent = $_ENV['PINTEREST_CONTENT_SECRET'];
 ?>
+<meta name="p:domain_verify" content="<?= htmlspecialchars($domainVerifyContent) ?>" />
