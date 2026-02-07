@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 22, 2025 at 07:42 PM
+-- Generation Time: Feb 07, 2026 at 05:23 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -72,7 +72,10 @@ INSERT INTO `blog_posts` (`id`, `post_link`, `post_image`, `post_image_alt`, `po
 (25, 'https://www.instagram.com/reel/DPf6IlmkbZk/', NULL, 'Yeah, we changed 🥀', 'Instagram', '2025-10-07', 'Yeah, we changed 🥀', 'This edit is for my gaming channel @divorce_plays 🎮💔 - moments, emotions, and silence between the shots. Sometimes the loudest changes happen quietly.', 'Instagram', NULL),
 (26, 'https://www.instagram.com/reel/DRm9id_kgOY/', NULL, '日本利用压电瓷砖将脚步转化...', 'Instagram', '2025-11-28', '日本利用压电瓷砖将脚步转化...', 'I tried using this prompt purely for virality — and yeah, it worked. 🚀 We crossed 4.5M+ views. ⚡️', 'Instagram', NULL),
 (27, 'https://www.instagram.com/reel/DSeh4BvkoEN/', NULL, '日本利用压电瓷砖将脚步转化为...', 'Instagram', '2025-12-20', '日本利用压电瓷砖将脚步转化为...', 'I tried a second time using this prompt purely for virality — and this time, it didn’t work. 😔', 'Instagram', NULL),
-(28, 'https://www.instagram.com/reel/DSkPhNBEZbN/', NULL, 'Recap \'25 ⏳', 'Instagram', '2025-12-22', 'Recap \'25 ⏳', 'POV: 2025 is about to end — and this is your recap. The moments, the lessons, the wins, and everything in between. ✨', 'Instagram', NULL);
+(28, 'https://www.instagram.com/reel/DSkPhNBEZbN/', NULL, 'Recap \'25 ⏳', 'Instagram', '2025-12-22', 'Recap \'25 ⏳', 'POV: 2025 is about to end — and this is your recap. The moments, the lessons, the wins, and everything in between. ✨', 'Instagram', NULL),
+(29, 'https://www.instagram.com/p/DUDPPikklvu/?img_index=1', NULL, 'U da real love ❤️‍🩹', 'Instagram', '2026-01-28', 'U da real love ❤️‍🩹', 'A calm rooftop evening, lost in the moment 🌆. Clicked a few frames while the city slowed down - soft skies ☁️, quiet thoughts, and that kind of peace you don’t plan.', 'Instagram', NULL),
+(30, 'https://www.instagram.com/p/DUOYFRBEq-R/?img_index=1', NULL, 'A day at GFG Kolkata 🏢', 'Instagram', '2026-02-02', 'A day at GFG Kolkata 🏢', 'Invited to the GeeksforGeeks Kolkata office - a day filled with insightful conversations 💡, community energy 🤝, and a closer look at how ideas turn into impact. Grateful for the experience and the people behind the platform.', 'Instagram', NULL),
+(31, 'https://www.instagram.com/p/DUdF6BJEvns/?img_index=1', NULL, 'Last night, unforgettable 🎸', 'Instagram', '2026-02-07', 'Last night, unforgettable 🎸', 'Last night was unforgettable - attending the KEI Alumni event as an ex-student. Pure vibes, great music, and moments that stay with you. Huge love to @fakiramusic for making it special 🎶✨.', 'Instagram', NULL);
 
 -- --------------------------------------------------------
 
@@ -170,7 +173,8 @@ INSERT INTO `resume_experience` (`id`, `job_title`, `start_year`, `end_year`, `d
 (1, 'Web Developer (MERN)', '2024', 'Present', 'Currently expanding my skills with the MERN stack (MongoDB, Express, React, Node.js). \r\nWorking on new and exciting projects using modern web technologies. \r\nMore MERN stack-based projects are coming soon!'),
 (2, 'Web Developer (Laravel)', '2023', 'Present', 'Self-taught Full Stacked Web Developed and managed web projects, including xodivorce.in. Collaborated with clients to create and deploy customized web solutions using HTML5, CSS3, JavaScript, PHP, and MySQL. Ensured mobile-friendliness with responsive design principles.'),
 (3, 'CITA - IT And ITAS', '2023', '2024', 'Completed Youth Computer Training at CITA in Basirhat, West Bengal. Acquired practical experience with a range of IT tools and technologies. Successfully finished the IT/ITAS training program, which lasted for 6 months.'),
-(4, 'Mobile App Development (iOS & Android)', '2025', 'Present', 'Learning to build modern iOS applications using Swift and SwiftUI, and modern Android applications using Kotlin and Jetpack Compose - with a strong focus on clean UI design, smooth performance, and intuitive user interactions.');
+(4, 'Mobile App Development (iOS & Android)', '2025', 'Present', 'Learning to build modern iOS applications using Swift and SwiftUI, and modern Android applications using Kotlin and Jetpack Compose - with a strong focus on clean UI design, smooth performance, and intuitive user interactions.'),
+(5, 'GeeksforGeeks Campus Ambassador (Campus Mantri)', '2026', 'Present', 'Representing GeeksforGeeks as the official Campus Mantri at Camellia Institute of Technology (CIT), Kolkata. Mentoring students in DSA, web development, and career preparation. Organizing workshops, coding initiatives, and technical sessions to foster a strong problem-solving and learning culture on campus.');
 
 -- --------------------------------------------------------
 
@@ -402,7 +406,7 @@ ALTER TABLE `resume_education`
 -- AUTO_INCREMENT for table `resume_experience`
 --
 ALTER TABLE `resume_experience`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

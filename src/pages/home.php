@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official Portfolio Website of <?= ucwords(strtolower($_ENV['AUTHOR'])) ?> - Full-Stack Web Developer - (Also Reknowned as @<?= strtolower($_ENV['DOMAIN']) ?>). | Know More About Him and His WorkExperince">
+    <meta name="description" content="Official Portfolio Website of <?= ucwords(strtolower($_ENV['AUTHOR'])) ?> - Full-Stack Web Developer - (Also Reknowned as @<?= strtolower($_ENV['DOMAIN']) ?>). | Know More About Him and His Work Experince">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:title" content="<?= $_ENV['DOMAIN'] ?> - Portfolio | @<?= strtolower($_ENV['DOMAIN']) ?>">
     <meta property="og:description" content="Official Portfolio Website of <?= ucwords(strtolower($_ENV['AUTHOR'])) ?> - Full-Stack Web Developer - (Also Reknowned as @<?= strtolower($_ENV['DOMAIN']) ?>).">
@@ -275,9 +275,10 @@
 
                     <p>
                         Hey there! I'm <?= ucwords(strtolower($_ENV['AUTHOR'])) ?>,
-                        a <?php echo $age; ?>-year-old tech enthusiast, self-taught Full Stack Web Developer.
+                        formally khown as @<?=  $_ENV['DOMAIN'] ?> - a <?php echo $age; ?>-year-old tech enthusiast,
+                        self-taught Full Stack Web Developer, and the GFG CM at Camellia Institute of Technology (CIT), Kolkata.
                         Delivering modern web apps with AI - entry level to modern frameworks for more than
-                        <?php echo $experienceYears; ?>+ years.
+                        <?php echo $experienceYears; ?>+ years - while mentoring students as a GFG CM.
                     </p>
                     <p>
                         Moreover, I add handcrafted touches on every line - every pixel I've placed. I'm on a mission to
@@ -835,7 +836,6 @@
         </div>
 
     </main>
-
 
     <!--
     - #Custom js link
