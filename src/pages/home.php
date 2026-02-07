@@ -275,7 +275,7 @@
 
                     <p>
                         Hey there! I'm <?= ucwords(strtolower($_ENV['AUTHOR'])) ?>,
-                        formally khown as @<?=  $_ENV['DOMAIN'] ?> - a <?php echo $age; ?>-year-old tech enthusiast,
+                        formally known as @<?= strtolower($_ENV['DOMAIN']) ?> - a <?php echo $age; ?>-year-old tech enthusiast,
                         self-taught Full Stack Web Developer, and the GFG CM at Camellia Institute of Technology (CIT), Kolkata.
                         Delivering modern web apps with AI - entry level to modern frameworks for more than
                         <?php echo $experienceYears; ?>+ years - while mentoring students as a GFG CM.
