@@ -276,9 +276,8 @@
                     <p>
                         Hey there! I'm <?= ucwords(strtolower($_ENV['AUTHOR'])) ?>,
                         formally known as @<?= strtolower($_ENV['DOMAIN']) ?> - a <?php echo $age; ?>-year-old tech enthusiast,
-                        self-taught Full Stack Web Developer, and the GFG CM at Camellia Institute of Technology (CIT), Kolkata.
-                        Delivering modern web apps with AI - entry level to modern frameworks for more than
-                        <?php echo $experienceYears; ?>+ years - while mentoring students as a GFG CM.
+                        self-taught Full Stack Web Developer. Delivering modern web apps with AI - entry level to modern frameworks for more than
+                        <?php echo $experienceYears; ?>+ years.
                     </p>
                     <p>
                         Moreover, I add handcrafted touches on every line - every pixel I've placed. I'm on a mission to
@@ -451,8 +450,8 @@
 
                             <li class="clients-item">
                                 <a>
-                                    <img src="./themes/dark_theme/assets/images/brands/steamstube.png"
-                                        alt="Steamstube logo">
+                                    <img src="./themes/dark_theme/assets/images/brands/sixseven.png"
+                                        alt="SixSeven logo">
                                 </a>
                             </li>
 
