@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 07, 2026 at 05:23 PM
+-- Generation Time: Mar 20, 2026 at 06:53 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -75,7 +75,8 @@ INSERT INTO `blog_posts` (`id`, `post_link`, `post_image`, `post_image_alt`, `po
 (28, 'https://www.instagram.com/reel/DSkPhNBEZbN/', NULL, 'Recap \'25 ⏳', 'Instagram', '2025-12-22', 'Recap \'25 ⏳', 'POV: 2025 is about to end — and this is your recap. The moments, the lessons, the wins, and everything in between. ✨', 'Instagram', NULL),
 (29, 'https://www.instagram.com/p/DUDPPikklvu/?img_index=1', NULL, 'U da real love ❤️‍🩹', 'Instagram', '2026-01-28', 'U da real love ❤️‍🩹', 'A calm rooftop evening, lost in the moment 🌆. Clicked a few frames while the city slowed down - soft skies ☁️, quiet thoughts, and that kind of peace you don’t plan.', 'Instagram', NULL),
 (30, 'https://www.instagram.com/p/DUOYFRBEq-R/?img_index=1', NULL, 'A day at GFG Kolkata 🏢', 'Instagram', '2026-02-02', 'A day at GFG Kolkata 🏢', 'Invited to the GeeksforGeeks Kolkata office - a day filled with insightful conversations 💡, community energy 🤝, and a closer look at how ideas turn into impact. Grateful for the experience and the people behind the platform.', 'Instagram', NULL),
-(31, 'https://www.instagram.com/p/DUdF6BJEvns/?img_index=1', NULL, 'Last night, unforgettable 🎸', 'Instagram', '2026-02-07', 'Last night, unforgettable 🎸', 'Last night was unforgettable - attending the KEI Alumni event as an ex-student. Pure vibes, great music, and moments that stay with you. Huge love to @fakiramusic for making it special 🎶✨.', 'Instagram', NULL);
+(31, 'https://www.instagram.com/p/DUdF6BJEvns/?img_index=1', NULL, 'Last night, unforgettable 🎸', 'Instagram', '2026-02-07', 'Last night, unforgettable 🎸', 'Last night was unforgettable - attending the KEI Alumni event as an ex-student. Pure vibes, great music, and moments that stay with you. Huge love to @fakiramusic for making it special 🎶✨.', 'Instagram', NULL),
+(32, 'https://www.instagram.com/p/DVjPepLkl5C/?img_index=1', NULL, 'She’s the colour :)', 'Instagram', '2026-03-20', 'She’s the colour :)', 'When she becomes your colour, and you start painting your life with her interests 🎨✨', 'Instagram', NULL);
 
 -- --------------------------------------------------------
 
@@ -174,7 +175,7 @@ INSERT INTO `resume_experience` (`id`, `job_title`, `start_year`, `end_year`, `d
 (2, 'Web Developer (Laravel)', '2023', 'Present', 'Self-taught Full Stacked Web Developed and managed web projects, including xodivorce.in. Collaborated with clients to create and deploy customized web solutions using HTML5, CSS3, JavaScript, PHP, and MySQL. Ensured mobile-friendliness with responsive design principles.'),
 (3, 'CITA - IT And ITAS', '2023', '2024', 'Completed Youth Computer Training at CITA in Basirhat, West Bengal. Acquired practical experience with a range of IT tools and technologies. Successfully finished the IT/ITAS training program, which lasted for 6 months.'),
 (4, 'Mobile App Development (iOS & Android)', '2025', 'Present', 'Learning to build modern iOS applications using Swift and SwiftUI, and modern Android applications using Kotlin and Jetpack Compose - with a strong focus on clean UI design, smooth performance, and intuitive user interactions.'),
-(5, 'GeeksforGeeks Campus Ambassador (Campus Mantri)', '2026', 'Present', 'Representing GeeksforGeeks as the official Campus Mantri at Camellia Institute of Technology (CIT), Kolkata. Mentoring students in DSA, web development, and career preparation. Organizing workshops, coding initiatives, and technical sessions to foster a strong problem-solving and learning culture on campus.');
+(5, 'GeeksforGeeks Campus Ambassador (Campus Mantri)', '2026', '2026', 'Representing GeeksforGeeks as the official Campus Mantri at Camellia Institute of Technology (CIT), Kolkata. Mentoring students in DSA, web development, and career preparation. Organizing workshops, coding initiatives, and technical sessions to foster a strong problem-solving and learning culture on campus.');
 
 -- --------------------------------------------------------
 
