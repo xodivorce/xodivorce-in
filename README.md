@@ -6,7 +6,7 @@
 ### Official portfolio website of Prasid Mandal. A full-stack web developer, also reknowned as @xodivorce.
 
 [![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
-[![version](https://img.shields.io/badge/version-v12.0.9-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
+[![version](https://img.shields.io/badge/version-v12.1.0-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 
 > **🥰 Like this project? Please consider giving it a Star (🌟) on GitHub to show us your appreciation. Thank you!**
@@ -43,6 +43,12 @@ Want to get started quickly? Follow the instructions below to install and run th
 3. **Configure Environment & Database**
    - Set up your `.env` file based on `.env.example` file.
    - Set up your MySQL database schema.
+
+4. **Run using Docker (recommended)**
+   - Make sure `Docker` is installed, then run:
+     ```bash
+     docker compose up -d
+     ```
 
 🐞 **Got Ideas or Spotted a Bug?**   
 Don’t be shy! [*Open an issue*](https://github.com/xodivorce/xodivorce_in/issues) to discuss new features, enhancements, or any bugs you find. Your feedback is golden!!

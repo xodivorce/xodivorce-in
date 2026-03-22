@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
 
 use Dotenv\Dotenv;
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 
 $file = __DIR__ . '/../themes/dark_theme/assets/pdf/' . $_ENV['DOMAIN'] . '-Curriculum-Vitae.pdf';

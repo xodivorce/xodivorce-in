@@ -1,0 +1,72 @@
+networks:
+  xodivorce:
+    driver: bridge
+
+services:
+  web:
+    build: .
+    container_name: xodivorce
+    ports:
+      - "${APP_PORT:-8080}:80"
+    volumes:
+      - ./src:/var/www/html/src
+      - ./schema:/var/www/html/schema
+    environment:
+      - DOMAIN=${DOMAIN:-xodivorce}
+      - AUTHOR=${AUTHOR:-Prasid Mandal}
+      - USER_GMAP=${USER_GMAP:-}
+      - USER_BDAY=${USER_BDAY:-}
+      - USER_PHONE=${USER_PHONE:-}
+      - USER_EXPY=${USER_EXPY:-2023}
+      - WEB_INDEXY=${WEB_INDEXY:-2024}
+      - DB_HOST=db
+      - DB_NAME=${DB_NAME:-xodivorce}
+      - DB_USER=${DB_USER:-root}
+      - DB_PASS=${DB_PASS:-}
+      - USER_CUSTOM_MAIL=${USER_CUSTOM_MAIL:-}
+      - SMTP_HOST=${SMTP_HOST:-}
+      - SMTP_USER=${SMTP_USER:-}
+      - SMTP_PASS=${SMTP_PASS:-}
+      - SMTP_SENDTO=${SMTP_SENDTO:-}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - PROJECT_START_YEAR=${PROJECT_START_YEAR:-2024}
+      - PINTEREST_CONTENT_SECRET=${PINTEREST_CONTENT_SECRET:-}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - xodivorce
+    restart: unless-stopped
+
+  db:
+    image: mariadb:10.4
+    container_name: xodivorce-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASS:-root}
+      MYSQL_DATABASE: ${DB_NAME:-xodivorce}
+    volumes:
+      - ./database:/var/lib/mysql
+      - ./schema/xodivorce.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_PASS:-root}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - xodivorce
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: xodivorce-phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "${PMA_PORT:-8081}:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: ${DB_PASS:-root}
+    depends_on:
+      - db
+    networks:
+      - xodivorce
