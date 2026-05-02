@@ -1,3 +1,5 @@
+>**⚠️ This repository is archived and no longer maintained. The portfolio has been migrated to a new Laravel-based codebase. 🔗 Latest version: [xodivorce/portfolio](https://github.com/xodivorce/portfolio)**
+
 ## Xodivorce - Portfolio Website: powered by @xodivorce
 
 ### 👀 Preview:
@@ -6,7 +8,7 @@
 ### Official portfolio website of Prasid Mandal. A full-stack web developer, also reknowned as @xodivorce.
 
 [![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
-[![version](https://img.shields.io/badge/version-v12.1.0-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
+[![version](https://img.shields.io/badge/version-v12.1.1-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 
 > **🥰 Like this project? Please consider giving it a Star (🌟) on GitHub to show us your appreciation. Thank you!**
